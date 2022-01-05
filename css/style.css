@@ -1,0 +1,27 @@
+body {
+  background-color: whitesmoke;
+}
+
+header {
+  color: rgb(23, 93, 95);
+}
+
+.cards {
+  background-color: rgba(42, 161, 165, 0.5);
+  height: 200px;
+  border: 10px inset rgb(184, 204, 203);
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.cards:hover {
+  opacity: 0.8;
+}
+
+.card-change {
+  background-color: rgba(140, 42, 165, 0.5);
+}
+
+.hide {
+  display: none;
+}
