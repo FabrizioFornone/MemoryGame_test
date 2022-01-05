@@ -1,13 +1,10 @@
 body {
-  background-color: whitesmoke;
-}
-
-header {
-  color: rgb(23, 93, 95);
+  background: url("../img/pattern-background.jpg");
+  background-size: cover;
 }
 
 .cards {
-  background-color: rgba(42, 161, 165, 0.5);
+  background-color: rgb(129, 192, 192);
   height: 200px;
   border: 10px inset rgb(184, 204, 203);
   font-size: 40px;
@@ -19,7 +16,7 @@ header {
 }
 
 .card-change {
-  background-color: rgba(140, 42, 165, 0.5);
+  background-color: rgba(140, 42, 165);
 }
 
 .hide {
