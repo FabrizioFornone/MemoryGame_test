@@ -1,12 +1,13 @@
 body {
   background: url("../img/pattern-background.jpg");
   background-size: cover;
+  font-family: "Montserrat", sans-serif;
 }
 
 .cards {
   background-color: rgb(129, 192, 192);
   height: 200px;
-  border: 10px inset rgb(184, 204, 203);
+  border: 5px inset rgb(184, 204, 203);
   font-size: 40px;
   cursor: pointer;
 }
