@@ -1,15 +1,16 @@
-// Funzioni
+// Funzione CardCreator
 
-function cardCreator(stamphtml, icon) {
-  let variabile = document.createElement("div");
-  variabile.className =
-    "cards d-flex justify-content-center align-items-center";
-  stamphtml.append(variabile);
-  variabile.addEventListener("click", function () {
+function cardCreator(stamphtml, icon, arrayShuffle, i) {
+  let card = document.createElement("div");
+  card.className = "cards d-flex justify-content-center align-items-center";
+  stamphtml.append(card);
+  card.addEventListener("click", function () {
     icon.classList.toggle("hide");
     this.classList.toggle("card-change");
+    comparisonArray.push(arrayShuffle[i]);
+    console.log(comparisonArray);
   });
-  return variabile;
+  return card;
 }
 
 function shuffle(arrayToShuffle) {
@@ -33,7 +34,7 @@ function newGame(arrayShuffle, iconList, cardGameCreator, outputHtml) {
     iconList = document.createElement("div");
     iconList.append(arrayShuffle[i]);
     iconList.classList.add("hide");
-    cardGameCreator(outputHtml, iconList).append(iconList);
+    cardGameCreator(outputHtml, iconList, arrayShuffle, i).append(iconList);
   }
 }
 
