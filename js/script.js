@@ -8,7 +8,6 @@ function cardCreator(stamphtml, icon, arrayShuffle, i) {
     icon.classList.toggle("hide");
     this.classList.toggle("card-change");
     comparisonArray.push(arrayShuffle[i]);
-    console.log(comparisonArray);
     if (comparisonArray.length > 2) {
       comparisonArray = [];
     } else {
