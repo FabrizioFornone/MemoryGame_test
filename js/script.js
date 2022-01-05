@@ -9,9 +9,18 @@ function cardCreator(stamphtml, icon, arrayShuffle, i) {
     this.classList.toggle("card-change");
     comparisonArray.push(arrayShuffle[i]);
     console.log(comparisonArray);
+    if (comparisonArray.length > 2) {
+      comparisonArray = [];
+    } else {
+      if (comparisonArray[0] !== comparisonArray[1]) {
+        
+      }
+    }
   });
   return card;
 }
+
+//Funzione Shuffle
 
 function shuffle(arrayToShuffle) {
   let currentIndex = arrayToShuffle.length;
@@ -27,6 +36,8 @@ function shuffle(arrayToShuffle) {
   return arrayToShuffle;
 }
 
+// Funzione NewGame che genera le card mixate
+
 function newGame(arrayShuffle, iconList, cardGameCreator, outputHtml) {
   outputHtml.innerHTML = "";
   counterToEmpty = 0;
@@ -40,9 +51,13 @@ function newGame(arrayShuffle, iconList, cardGameCreator, outputHtml) {
 
 // --------------------------------------------------
 
+// Aggancio con il DOM
+
 const hookHtml = document.querySelector(".hook");
 
-const buttonJs = document.getElementById("button-js");
+const buttonNewGameJs = document.getElementById("button-js");
+
+// Array icone
 
 const arrayIcon = [
   "👽",
@@ -59,13 +74,17 @@ const arrayIcon = [
   "👻",
 ];
 
-let divIcon = "";
-
-let counter = 0;
+// Array di comparazione
 
 let comparisonArray = [];
 
-buttonJs.addEventListener("click", function () {
+// Div contentente le icone
+
+let divIcon = "";
+
+// Button New game Generator
+
+buttonNewGameJs.addEventListener("click", function () {
   let arrayMixed = shuffle(arrayIcon);
   newGame(arrayMixed, divIcon, cardCreator, hookHtml);
 });

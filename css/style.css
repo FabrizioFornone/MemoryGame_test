@@ -25,3 +25,7 @@ header {
 .hide {
   display: none;
 }
+
+.find {
+  background-color: brown;
+}
