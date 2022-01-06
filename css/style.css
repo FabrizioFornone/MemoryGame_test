@@ -27,3 +27,8 @@ body {
 .find {
   background-color: brown;
 }
+
+.disabled {
+  pointer-events: none;
+  cursor: wait;
+}

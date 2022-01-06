@@ -8,11 +8,17 @@ function cardCreator(stamphtml, icon, arrayShuffle, i) {
     icon.classList.toggle("hide");
     this.classList.toggle("card-change");
     comparisonArray.push(arrayShuffle[i]);
-    if (comparisonArray.length > 2) {
-      comparisonArray = [];
-    } else {
-      if (comparisonArray[0] !== comparisonArray[1]) {
-        
+    let len = comparisonArray.length;
+    if (len === 2) {
+      if (comparisonArray[0].innerHTML === comparisonArray[1].innerHTML) {
+        comparisonArray.forEach(function (elemento) {
+          elemento.classList.add("find", "disabled");
+        });
+        comparisonArray = [];
+      } else {
+        icons.forEach(function (item) {
+          item.classList.add("disabled");
+        });
       }
     }
   });
@@ -85,5 +91,6 @@ let divIcon = "";
 
 buttonNewGameJs.addEventListener("click", function () {
   let arrayMixed = shuffle(arrayIcon);
+  console.log(arrayMixed);
   newGame(arrayMixed, divIcon, cardCreator, hookHtml);
 });
